@@ -5,11 +5,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* height: 100vh; */
     background-color: #f0f0f0;
-  }
-  
-  .poster-container {
+}
+
+.poster-container {
     width: 90%;
     max-width: 1200px;
     background-color: #ffffff;
@@ -18,92 +17,92 @@ body {
     overflow: hidden;
     text-align: center;
     padding: 20px;
-  }
-  
-  .carousel-container {
+}
+
+.carousel-container {
     overflow: hidden;
     position: relative;
     width: 100%;
-    margin: 20px;
-    /* gap: 20px; */
-  }
-  
-  .carousel {
+    margin-bottom: 20px;
+}
+
+.carousel {
     display: flex;
     width: calc(100% * 2);
     animation: scroll 20s linear infinite;
-  }
-  
-  .carousel img {
-    width: 20%;
-    margin-left: 100px;
-  }
-  
-  @keyframes scroll {
+}
+
+.carousel img {
+    width: 10%;
+    margin: 0 2%;
+}
+
+@keyframes scroll {
     0% {
-      transform: translateX(0);
+        transform: translateX(0);
     }
     100% {
-      transform: translateX(-50%);
+        transform: translateX(-50%);
     }
-  }
-  
-  .sections-container {
+}
+
+.sections-container {
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin-bottom: 20px;
-  }
-  
-  .section {
-    width: 40%;
+    flex-wrap: wrap;
+}
+
+.section {
+    width: 45%;
     padding: 20px;
     color: #ffffff;
-    margin: 0 10px;
-  }
-  
-  .sad-section {
+    margin: 10px 0;
+}
+
+.sad-section {
     background-color: #7a7a7a;
-  }
+}
 
-  .sad-section img {
+.sad-section img {
     width: 50%;
-  }
-  
-  .joyful-section {
-    background-color: #4caf50;
-  }
+}
 
-  .joyful-section img {
+.joyful-section {
+    background-color: #4caf50;
+}
+
+.joyful-section img {
     width: 70%;
-  }
-  
-  .final-message {
+}
+
+.final-message {
     width: 80%;
     padding: 20px;
     background-color: #2196f3;
     color: #ffffff;
     border-radius: 10px;
-    margin: 0 auto;
-  }
-  
-  h2 {
+    margin: 20px auto 0;
+}
+
+h2 {
     margin: 0 0 10px;
-  }
-  
-  p {
+}
+
+p {
     margin: 10px 0;
     font-size: 1.2em;
-  }
-  
-  .section-image {
+}
+
+.section-image {
     width: 100%;
     height: auto;
     margin-top: 20px;
     border-radius: 10px;
-  }
-  
-  .cta-button {
+}
+
+.cta-button {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
@@ -113,41 +112,66 @@ body {
     font-size: 1.2em;
     border-radius: 5px;
     animation: pulse 1.5s infinite;
-  }
-  
-  @keyframes pulse {
+}
+
+@keyframes pulse {
     0% {
-      transform: scale(1);
-      box-shadow: 0 0 5px rgba(255, 152, 0, 0.5);
+        transform: scale(1);
+        box-shadow: 0 0 5px rgba(255, 152, 0, 0.5);
     }
     50% {
-      transform: scale(1.1);
-      box-shadow: 0 0 20px rgba(255, 152, 0, 1);
+        transform: scale(1.1);
+        box-shadow: 0 0 20px rgba(255, 152, 0, 1);
     }
     100% {
-      transform: scale(1);
-      box-shadow: 0 0 5px rgba(255, 152, 0, 0.5);
+        transform: scale(1);
+        box-shadow: 0 0 5px rgba(255, 152, 0, 0.5);
     }
-  }
-  
-  .highlight {
+}
+
+.highlight {
     font-weight: bold;
     color: #ffeb3b;
-  }
-  
-  .highlight-animated {
+}
+
+.highlight-animated {
     animation: highlight-flash 1.5s infinite;
-  }
-  
-  @keyframes highlight-flash {
+}
+
+@keyframes highlight-flash {
     0% {
-      color: #ffeb3b;
+        color: #ffeb3b;
     }
     50% {
-      color: #ffffff;
+        color: #ffffff;
     }
     100% {
-      color: #ffeb3b;
+        color: #ffeb3b;
     }
-  }
-  
+}
+
+@media (max-width: 768px) {
+    .sections-container {
+        flex-direction: column;
+    }
+
+    .section {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .final-message {
+        width: 90%;
+        font-size: 0.9em;
+    }
+
+    .cta-button {
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    .carousel img {
+        width: 40%;
+    }
+}
