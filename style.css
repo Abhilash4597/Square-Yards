@@ -1,0 +1,153 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    background-color: #f0f0f0;
+  }
+  
+  .poster-container {
+    width: 90%;
+    max-width: 1200px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .carousel-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    margin: 20px;
+    /* gap: 20px; */
+  }
+  
+  .carousel {
+    display: flex;
+    width: calc(100% * 2);
+    animation: scroll 20s linear infinite;
+  }
+  
+  .carousel img {
+    width: 20%;
+    margin-left: 100px;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .sections-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .section {
+    width: 40%;
+    padding: 20px;
+    color: #ffffff;
+    margin: 0 10px;
+  }
+  
+  .sad-section {
+    background-color: #7a7a7a;
+  }
+
+  .sad-section img {
+    width: 50%;
+  }
+  
+  .joyful-section {
+    background-color: #4caf50;
+  }
+
+  .joyful-section img {
+    width: 70%;
+  }
+  
+  .final-message {
+    width: 80%;
+    padding: 20px;
+    background-color: #2196f3;
+    color: #ffffff;
+    border-radius: 10px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    margin: 0 0 10px;
+  }
+  
+  p {
+    margin: 10px 0;
+    font-size: 1.2em;
+  }
+  
+  .section-image {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff9800;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    animation: pulse 1.5s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 5px rgba(255, 152, 0, 0.5);
+    }
+    50% {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px rgba(255, 152, 0, 1);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 5px rgba(255, 152, 0, 0.5);
+    }
+  }
+  
+  .highlight {
+    font-weight: bold;
+    color: #ffeb3b;
+  }
+  
+  .highlight-animated {
+    animation: highlight-flash 1.5s infinite;
+  }
+  
+  @keyframes highlight-flash {
+    0% {
+      color: #ffeb3b;
+    }
+    50% {
+      color: #ffffff;
+    }
+    100% {
+      color: #ffeb3b;
+    }
+  }
+  
